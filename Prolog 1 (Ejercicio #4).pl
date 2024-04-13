@@ -25,7 +25,7 @@ plato_principal(Plato) :-
 plato_principal(Plato) :-
     plato(pescado, Plato, _).
 
-% Regla para calcular las calorías totales de una lista de platos
+% Regla para calcular las calorÃ­as totales de una lista de platos
 calorias_totales([], 0).
 calorias_totales([Plato|Platos], TotalCalorias) :-
     plato(_, Plato, Calorias),
@@ -46,3 +46,5 @@ combinaciones_de_comidas(MaxCalorias, Combinaciones) :-
     Length >= 5,
     length(Combinaciones, 5),
     append(Combinaciones, _, TodasCombinaciones).
+
+% Se prueba como: combinaciones_de_comidas(800, Combinaciones).
